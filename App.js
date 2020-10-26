@@ -2,17 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Appbar from './src/Components/Appbar';
-import MemoList from './src/Components/MemoList';
-import CircleButton from './src/elements/CircleButton';
+import Appbar from './src/components/Appbar';
+import MemoDetailScreen from './src/screens/MemoDetailScreen';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Appbar />
-        <MemoList />
-        <CircleButton>+</CircleButton>
+        <MemoDetailScreen />
       </View>
     );
   }
