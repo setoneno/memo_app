@@ -32,13 +32,15 @@ class CircleButton extends React.Component {
     }
 
     return (
-      <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
-        {
-          this.state.fontLoaded ? (
-            <CustomIcon name={name} style={[styles.circleButtonTitle, { color: textColor }]} />
-          ) : null
-        }
-      </View>
+      <TouchableHighlight style={[styles.container, style]} onPress={onPress} underlayColor="transparent">
+        <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
+          {
+            this.state.fontLoaded ? (
+              <CustomIcon name={name} style={[styles.circleButtonTitle, { color: textColor }]} />
+            ) : null
+          }
+        </View>
+      </TouchableHighlight>
     );
   }
 }
@@ -56,10 +58,10 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
-    shawowRadius: 3,
+    shadowRadius: 3,
   },
   circleButtonTitle: {
-    fontFamliy: 'FontAwesome',
+    fontFamily: 'FontAwesome',
     fontSize: 24,
     lineHeight: 32,
   },

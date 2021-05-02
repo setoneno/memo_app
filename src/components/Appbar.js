@@ -23,11 +23,12 @@ const styles = StyleSheet.create({
     height: 78,
     paddingTop: 30,
     backgroundColor: '#265366',
+    justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 0},
     shadowOpacity: 0.5,
-    shawowRadius: 3,
+    shadowRadius: 3,
     zIndex: 10,
   },
   appbarTitle: {
